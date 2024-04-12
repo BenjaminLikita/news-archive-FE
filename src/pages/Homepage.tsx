@@ -14,6 +14,9 @@ const Homepage = () => {
               <button>Submit</button>
             </form>
         </div>
+        <div>
+          <h1>hello world</h1>
+        </div>
     </Container>
   )
 }

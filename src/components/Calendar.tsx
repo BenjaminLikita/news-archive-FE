@@ -1,17 +1,18 @@
-import { useState } from 'react'
+import { FC } from 'react'
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
 import '../Calendar.css';
+import { Value } from '../pages/Homepage';
 
 
 
-type ValuePiece = Date | null;
+type CalendarProps = {
+  value: Value;
+  // onChange: (value: Value, e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void | Dispatch<SetStateAction<Date>>;
+  onChange: any;
+}
 
-type Value = ValuePiece | [ValuePiece, ValuePiece];
-
-const CalendarComponent = () => {
-
-  const [value, onChange] = useState<Value>(new Date());
+const CalendarComponent: FC<CalendarProps> = ({value, onChange}) => {
   
 
   return (
